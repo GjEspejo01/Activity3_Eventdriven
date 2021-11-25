@@ -1,0 +1,37 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav mode="side" opened class="app-sidenav">
+    <mat-toolbar color="primary">
+      Menu
+    </mat-toolbar>
+    <mat-list>
+      <img class="avatar mat-elevation-z8" src="assets/ESPEJO.jpeg" />
+
+      <h4 class="name">George Joseph M. Espejo</h4>
+      <p class="designation">College of Engineering</p>
+      <P class="designation">I.T</P>
+      <mat-divider></mat-divider>
+
+      <mat-list-item class="menu-button">
+        <a routerLink="home" routerLinkActive="active"(click)="navClick('Home')"><mat-icon>home</mat-icon>Home</a> </mat-list-item>
+      <mat-list-item><a routerLink="profile"(click)="navClick('Profile')"routerLinkActive="active"><mat-icon>person</mat-icon>Personal Portfolio</a></mat-list-item>
+      <mat-list-item><a routerLink="contacts"(click)="navClick('Contacts')"routerLinkActive="active"><mat-icon>contacts</mat-icon>Personal Contact</a></mat-list-item>
+      <mat-list-item><a routerLink="gallery"(click)="navClick('Gallery')"routerLinkActive="active"><mat-icon>photos</mat-icon>Gallery</a></mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+    <mat-toolbar color="primary">
+      <button mat-button class="sidenav-toggle">
+        <mat-icon>menu</mat-icon>
+      </button>
+      {{currentNav}}
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
+
+
+
+
+
